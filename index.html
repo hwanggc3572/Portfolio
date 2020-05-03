@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Gyuchan Hwang's Page</title>
     <style>
+      * {
+          padding: 0;
+          margin: 0;
+      }
+
       #main_title {
         font-weight: bold;
       }
@@ -12,10 +17,45 @@
       #project_info {
 
       }
+
+      .header{
+        width: 100%;
+        height: 60px;
+        background: Black;
+      }
+      .navigation{
+        width: 100%;
+        padding: 18px 0;
+        text-align: center;
+      }
+      .navigation a{
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 0 18PX;
+        text-decoration: NONE;
+        color: #fff;
+        font-weight: 500;
+        text-shadow: 0 0 20px #000000;
+        transition: 0.3s;
+      }
+      .navigation a:hover{
+        color: #333;
+      }
+      .nav{
+        position: fixed;
+        background: Black;
+      }
+
+
+      .screen_images {
+        width: 100%;
+        height: auto;
+      }
+
       .clickable_text {
         color: powderblue;
       }
-      .image_files {
+      .small_images {
         width: 100px;
         height: 100px;
       }
@@ -28,9 +68,37 @@
     </style>
   </head>
   <body>
+    <a name="Home"></a>
+    <div class="header">
+      <div class="navigation">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Project">Project</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+    var nav = document.getElementsByClassName("navigation");
+    window.onscroll = function sticky() {
+      if(window.pageYOffset > nav[0].offsetTop) {
+        nav[0].classList.add("nav");
+      } else {
+        nav[0].classList.remove("nav");
+      }
+    }
+    </script>
+    <!-- Navigation bar -->
+
+
+
     <h1 id="main_title">Gyuchan Hwang</h1>
+    <img class="screen_images" src="keyboard.jpg"></img>
+
+
     <hr>
+
     <p id="personal_info">
+      <a name="About"></a>
+      <br><br>
         Address: 75 Tennyson Rd, East Windsor, NJ, 08520<br><br>
 
         Contact(Mobile) Number: 518-421-4088<br><br>
@@ -46,26 +114,29 @@
         - Java Software Developer, <a class="clickable_text" href="https://www.beaconfiresolution.com/">Beaconfire Solution Inc</a> (2020.04.20 ~ )<br><br>
 
         Programming Skills:<br>
-        Java, C, Python, HTML, CSS, JavaScript<br>
-        <br>
+        Java, C, Python, HTML, CSS, JavaScript<br><br><br>
     </p>
+
     <hr>
+
     <p id="project_info">
+      <a name="Project"></a>
+      <br><br>
       Project:<br>
       - Webgame Collection:<br><br>
-      <a href="tic_tac_toe.html"><img class="image_files" src="tic_tac_toe.png" title="Tic Tac Toe"></img></a>
-      <a href="multiplying_game.html"><img class="image_files" src="multiplying_game.png" title="Multiplying Game"></img></a>
-      <a href="reaction_time.html"><img class="image_files" src="reaction_time.png" title="Reaction Time"></img></a>
-      <a href="rock_paper_scissors.html"><img class="image_files" src="rock_paper_scissors.png" title="Rock Paper Scissors"></img></a>
-      <a href="same_card.html"><img class="image_files" src="same_card.png" title="Matching Same Cards"></img></a>
-      <a href="tetris.html"><img class="image_files" src="tetris.png" title="Tetris"></img></a>
-      <a href="mine_sweeper.html"><img class="image_files" src="mine_sweeper.png" title="Mine Sweeper"></img></a>
+      <a href="tic_tac_toe.html"><img class="small_images" src="tic_tac_toe.png" title="Tic Tac Toe"></img></a>
+      <a href="multiplying_game.html"><img class="small_images" src="multiplying_game.png" title="Multiplying Game"></img></a>
+      <a href="reaction_time.html"><img class="small_images" src="reaction_time.png" title="Reaction Time"></img></a>
+      <a href="rock_paper_scissors.html"><img class="small_images" src="rock_paper_scissors.png" title="Rock Paper Scissors"></img></a>
+      <a href="same_card.html"><img class="small_images" src="same_card.png" title="Matching Same Cards"></img></a>
+      <a href="tetris.html"><img class="small_images" src="tetris.png" title="Tetris"></img></a>
+      <a href="mine_sweeper.html"><img class="small_images" src="mine_sweeper.png" title="Mine Sweeper"></img></a>
       <br><br>
 
       - Mobile Application:<br>
         FunFlight: Android application (on <a class="clickable_text" href="https://play.google.com/store/apps/details?id=com.ff.funflight">Google Play</a>)
         which contains mini games that users can play in airplane mode<br>
-        <img class="image_files" src="funflight.png"></img>
+        <img class="small_images" src="funflight.png"></img>
     </p>
   </body>
 </html>
